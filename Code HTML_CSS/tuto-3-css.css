@@ -3,10 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <title>Sélecteurs Multiples et Descendants</title>
-    <link rel="stylesheet" href="tuto-3-css.css">
+    
 </head>
-<body>
-.title {
+<body> 
+    <style>
+    .title {
     color: red;
 }
 h2, h3 {
@@ -14,7 +15,9 @@ h2, h3 {
 }
 .article-body p {
     color: green;
-}
+} 
+    </style>
+
     <h1 class="title">Les Sélecteurs</h1>
     
     <div class="article-body">
