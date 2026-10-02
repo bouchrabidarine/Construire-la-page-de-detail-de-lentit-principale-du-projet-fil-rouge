@@ -1,0 +1,8 @@
+.cache {
+    display: none;
+}
+.citation-bloc {
+    display: block;      /* On force le passage à la ligne */
+    margin-top: 20px;    /* Maintenant qu'elle est block, on peut lui donner une marge ! */
+    color: gray;
+}
