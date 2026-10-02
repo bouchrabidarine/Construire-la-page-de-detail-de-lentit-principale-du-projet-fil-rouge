@@ -1,0 +1,16 @@
+.carte {
+    max-width: 600px;
+    margin: auto;
+    margin-top: -50px;
+    padding: 30px;
+    border: 1px solid #ccc;
+    border-radius: 20px;
+    background: white; /* Important si la page avait une couleur de fond */
+} 
+.citation {
+    margin: 20px 0;
+    padding: 15px 20px;
+    background: #f8f9fa;
+    border-left: 5px solid blue;
+    border-radius: 0 10px 10px 0; /* Haut-gauche: 0, Haut-droit: 10px, Bas-droit: 10px, Bas-gauche: 0 */
+}
