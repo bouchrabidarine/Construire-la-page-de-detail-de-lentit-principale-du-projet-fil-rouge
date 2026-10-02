@@ -1,11 +1,4 @@
-<!DOCTYPE html>
-<html lang="fr">
-<head>
-    <meta charset="UTF-8">
-    <title>Arrière-plans et Affichage</title>
-</head>
-<body> 
-    <style>
+
         .header {
     background: #f0f6ff;
     padding: 40px;
@@ -17,12 +10,4 @@
     color: #1c5bba;
     padding: 5px 15px;
 }
-    </style>
-
-<div class="header">
-    <span class="badge">CSS</span>
-    <span class="badge">Niveau 1</span>
-    <h1>Apprendre le CSS</h1>
-</div>
-</body>
-</html>
+    
