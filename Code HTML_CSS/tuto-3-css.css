@@ -1,11 +1,4 @@
-<!DOCTYPE html>
-<html lang="fr">
-<head>
-    <meta charset="UTF-8">
-    <title>Sélecteurs Multiples et Descendants</title>
-    
-</head>
-<body> 
+
     <style>
     .title {
     color: red;
@@ -16,18 +9,4 @@ h2, h3 {
 .article-body p {
     color: green;
 } 
-    </style>
-
-    <h1 class="title">Les Sélecteurs</h1>
-    
-    <div class="article-body">
-        <h2>Titre de section</h2>
-        <p>Un paragraphe dans le corps de l'article.</p>
-        <h3>Sous-titre</h3>
-        <p>Un autre paragraphe.</p>
-    </div>
-    
-    <h2>Titre hors article</h2>
-    <p>Ce paragraphe n'est pas dans l'article.</p>
-</body>
-</html>
+   
