@@ -1,171 +1,223 @@
-*{
-    box-sizing: border-box;
+/* ==================== GLOBAL STYLES ==================== */
+* {
     margin: 0;
     padding: 0;
-} 
-body{
-    background-repeat: no-repeat;
-}
- .navbar{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background-color: rgb(30, 29, 29);
-    padding: 15px 30px;
-    color: white;
- }
- .logo{
-   color: #10b981;
-   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
- }
-.content-section{
- padding: 40px;
- display: flex;
- justify-content: center;
-
-} 
-
-a{
-    text-decoration: none;
-    margin-left: 20px;
-    font-size: 16px;
-    color: aliceblue;
+    box-sizing: border-box;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
-a:hover{
-    color: #10b981;
-}
-.hero-image{
+
+body {
+    background-color: #121212;
+    color: #ffffff;
+    min-height: 100vh;
     display: flex;
-    justify-content: flex-end;
-    flex: 1; 
-    
- 
-}
-.hero-image img{
-    width: 100%;
-    max-width: 450px;
-    height: auto;
-    object-fit: cover;
-    border-radius: 50%;
-}
-.hero-container{
-    display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
-    background-color:black;
-    padding: 60px 10px;
-    min-height: 80vh;
-    color: white;
+    overflow-x: hidden;
 }
 
-.hero-text{
+.container {
+    width: 100%;
+    max-width: 1200px;
+    min-height: 100vh;
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: relative;
+}
+
+/* --- Logo Style --- */
+.logo {
+    color: #00ff87;
+    font-size: 1.8rem;
+    font-weight: bold;
+    align-self: flex-start;
+}
+
+/* --- Menu Style --- */
+.nav-menu {
+    align-self: flex-start;
+    display: flex;
+    gap: 30px;
+    margin-top: 20px;
+    z-index: 10;
+}
+
+.nav-item {
+    color: #888888;
+    text-decoration: none;
+    font-size: 1rem;
+    text-transform: capitalize;
+    cursor: pointer;
+    transition: color 0.3s ease;
+    background: none;
+    border: none;
+    padding-bottom: 4px;
+}
+
+.nav-item:hover, .nav-item.active {
+    color: #ffffff;
+    border-bottom: 2px solid #ffffff;
+}
+
+/* --- Switching System Display --- */
+.page-section {
+    display: none;
     flex: 1;
-    margin: 50px;
+    width: 100%;
+    opacity: 0;
+    transition: opacity 0.4s ease-in-out;
 }
-.hero-text h1{
-    margin: 15px 0;
-    font-family: sans-serif;
-}
-h2{
-    font-size: 70px;
-}
-p{
-    font-size: 20px;
-}
-/* --- Styles dyal Page t-taniya (About) --- */
-.about-page {
-    background-color: #1a1a1a;  /* Khlfiya kahla ghamaq shwiya */
-    min-height: 100vh;          /* Tched shasha kamla bohdha f-l-irtifa3 */
+
+.page-section.active-page {
     display: flex;
-    align-items: center;        /* T-centrer l-kolshi amoudiyan */
-    justify-content: center;
-    padding: 80px 10%;
-    font-family: 'Poppins', sans-serif; /* Khat rtab bhal l-gwalb */
-  }
-  
-  /* L-container l-wsat li fih l-foto w l-hdra */
-  .about-container {
-    display: flex;
+    opacity: 1;
+}
+
+/* ==================== PAGE 1: HOME STYLING ==================== */
+.home-content {
     align-items: center;
-    gap: 50px;                  /* Tasi3 bin l-foto w l-hdra */
+    justify-content: center;
+    gap: 80px;
+    flex-wrap: wrap;
+}
+
+.profile-container {
+    display: flex;
+    justify-content: center;
+}
+
+.image-circle {
+    width: 320px;
+    height: 320px;
+    border-radius: 50%;
+    overflow: hidden;
+    background-color: #2a2a2a;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.image-circle img {
     width: 100%;
-    max-width: 1100px;
-  }
-  
-  /* --- Jiha dyal l-foto --- */
-  .about-image-side {
-    flex: 1;
-    max-width: 40%;             /* Ard dyal l-foto */
-  }
-  
-  .about-image-side img {
-    width: 100%;
-    height: auto;
-    border-radius: 8px;         /* T-gadd jnab d l-foto shwiya */
-    box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.5); /* Khel d-dl t7t l-foto */
-  }
-  
-  /* --- Jiha dyal l-hdra --- */
-  .about-text-side {
-    flex: 1;
-    color: white;
-  }
-  
-  .green-subtitle {
-    color: #10b981;             /* Lwn khdar d "Who am i?" */
+    height: 100%;
+    object-fit: cover;
+}
+
+.intro-container {
+    max-width: 500px;
+}
+
+.greeting {
     font-size: 1.1rem;
-    font-weight: 600;
-    display: block;
+    color: #a0a0a0;
     margin-bottom: 10px;
-  }
-  
-  .about-text-side h2 {
+}
+
+.main-title {
+    font-size: 3.5rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+    white-space: nowrap;
+}
+
+.cursor {
+    color: #ffffff;
+    animation: blink 0.7s infinite;
+}
+
+.subtitle {
+    font-size: 1.2rem;
+    color: #888888;
+}
+
+/* ==================== PAGE 2: ABOUT STYLING ==================== */
+.about-content {
+    align-items: center;
+    justify-content: center;
+    gap: 60px;
+    flex-wrap: wrap;
+    padding: 20px 0;
+}
+
+.large-profile {
+    width: 400px;
+    max-width: 100%;
+}
+
+.large-profile img {
+    width: 100%;
+    border-radius: 8px;
+    object-fit: cover;
+}
+
+.details-card {
+    flex: 1;
+    max-width: 600px;
+}
+
+.section-tag {
+    color: #00ff87;
+    font-size: 0.9rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    display: block;
+    margin-bottom: 15px;
+}
+
+.about-title {
     font-size: 2.2rem;
     line-height: 1.3;
     margin-bottom: 20px;
-  }
-  
-  .about-text-side .description {
-    color: #9ca3af;             /* Lwn rmadi d l-paragraph */
+}
+
+.about-description {
+    color: #b0b0b0;
     line-height: 1.6;
     margin-bottom: 30px;
-  }
-  
-  /* --- L-moraba3 dyal l-ma3lomat (Grid) --- */
-  .info-grid {
+    font-size: 1.05rem;
+}
+
+.meta-info {
     display: grid;
-    grid-template-columns: 1fr 1fr; /* Kayfrreq l-ma3lomat 3la joj stora horizontalement */
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     gap: 15px;
     margin-bottom: 35px;
-    border-top: 1px solid #374151;  /* Satar khfif f-l-fowq bhal l-moraba3 */
-    padding-top: 20px;
-  }
-  
-  .info-item {
-    font-size: 1rem;
-    color: #e5e7eb;
-  }
-  
-  .info-item strong {
-    color: #10b981;             /* Rdd lwn dyal Name:, Age: b-l-khdar */
+    color: #e0e0e0;
+}
+
+.meta-info strong {
+    color: #00ff87;
     margin-right: 5px;
-  }
-  
-  /* --- Bouton Download CV --- */
-  .btn-download {
-    background-color: #10b981;  /* Lwn l-khdar */
-    color: white;
-    border: none;
+}
+
+.download-btn {
+    display: inline-block;
+    background-color: #00ff87;
+    color: #121212;
     padding: 12px 30px;
-    font-size: 1rem;
-    font-weight: 600;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: 0.3s ease;
-  }
-  
-  .btn-download:hover {
-    background-color: #059669;  /* Lwn kay-ghmaq mlli t-7ot 3lih l-la-sour */
-  }
-  
+    border-radius: 4px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.download-btn:hover {
+    background-color: #00cc6a;
+}
+
+/* --- Blinking Cursor Animation --- */
+@keyframes blink {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0; }
+}
+
+/* --- Responsive Layout for Mobile/Tablets --- */
+@media (max-width: 768px) {
+    .main-title { font-size: 2.5rem; }
+    .home-content, .about-content { flex-direction: column; text-align: center; }
+    .large-profile { width: 280px; }
+    .nav-menu { align-self: center; }
+    .meta-info { grid-template-columns: 1fr; text-align: left; padding-left: 20px;}
+}
