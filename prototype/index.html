@@ -1,36 +1,82 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-    <meta charset="UTF-8<">
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title> mon premier article</title>
+    <title>Portfolio Mary Smith</title>
+    <!-- Hna l-irtibat m3a fichier CSS monfasil -->
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header class="navbar">
-        <h1 class="logo"> PortFolio</h1>
 
-        <nav>
-            <a href="#">home</a>
-            <a href="my skills.html">MY skills</a>
-            <a href="#"> contact</a>
-           
+    <div class="container">
+        <!-- Logo dima l-fo9 3la l-yissar -->
+        <header class="logo">PortFolio</header>
+
+        <!-- ==================== PAGE 1: HOME ==================== -->
+        <main id="home-page" class="page-section active-page home-content">
+            <div class="profile-container">
+                <div class="image-circle">
+                    <!-- Beddel avatar.jpg b smityat tsouira dyalk -->
+                    <img src="article.jpg" alt="Mary Smith Circle">
+                </div>
+            </div>
+            <div class="intro-container">
+                <p class="greeting">HI there!</p>
+                <h1 class="main-title">Im Developer<span class="cursor">|</span></h1>
+                <p class="subtitle">i make the complex</p>
+            </div>
+        </main>
+
+        <!-- ==================== PAGE 2: ABOUT ME ==================== -->
+        <main id="about-page" class="page-section about-content">
+            <div class="large-profile">
+                <!-- Beddel avatar.jpg b tsouira dyalk l-kbira -->
+                <img src="jj.jpg" alt="Mary Smith Large">
+            </div>
+            <div class="details-card">
+                <span class="section-tag">Who am i?</span>
+                <h1 class="about-title">I'm Mary Smith, a visual UX/UI Designer and Web Developer</h1>
                 
-        </nav>     
-         
-    </header>
- <section class="hero-container">
-    <div class="hero-image">
-        <img src="article.jpg" >
-       </div>  
-        <div class="hero-text">
-            <p>HI there!</p> 
-            <h2>Im Developer|</h2> 
-            <p> i make the complex</p>
-        </div> 
-        
-        
-       
+                <p class="about-description">
+                    Bienvenue sur mon portfolio. Je suis étudiant en première année de développement web. 
+                    Ce portfolio présente mes projets, mes compétences et mon évolution dans le domaine du développement web.
+                </p>
+
+                <div class="meta-info">
+                    <div><strong>Name:</strong> Mary Smith</div>
+                    <div><strong>From:</strong> New York, USA</div>
+                    <div><strong>Age:</strong> 25</div>
+                    <div><strong>Email:</strong> contact@example.com</div>
+                </div>
+
+                <a href="#" class="download-btn">Download CV</a>
+            </div>
+        </main>
+
+        <!-- ==================== NAVIGATION MENU ==================== -->
+        <nav class="nav-menu">
+            <button class="nav-item active" onclick="navigateTo('home-page')">home</button>
+            <button class="nav-item" onclick="navigateTo('about-page')">My skills</button>
+            <button class="nav-item" onclick="navigateTo('about-page')">contact</button>
+        </nav>
+    </div>
+
+    <!-- Script bach tbeddel bin l-pages bla ma t-recharger l-page -->
+    <script>
+        function navigateTo(pageId) {
+            const pages = document.querySelectorAll('.page-section');
+            pages.forEach(page => page.classList.remove('active-page'));
+
+            const activePage = document.getElementById(pageId);
+            activePage.classList.add('active-page');
+
+            const menuItems = document.querySelectorAll('.nav-item');
+            menuItems.forEach(item => item.classList.remove('active'));
+
+            event.target.classList.add('active');
+        }
+    </script>
 </body>
 </html>
 
