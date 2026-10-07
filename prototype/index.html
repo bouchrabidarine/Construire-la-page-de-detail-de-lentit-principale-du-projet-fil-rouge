@@ -1,82 +1,99 @@
+```html
 <!DOCTYPE html>
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio Mary Smith</title>
-    <!-- Hna l-irtibat m3a fichier CSS monfasil -->
+
+    <title>Détail du projet - soolde</title>
+
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
 
-    <div class="container">
-        <!-- Logo dima l-fo9 3la l-yissar -->
-        <header class="logo">PortFolio</header>
+    <!-- En-tête -->
+    <header>
+        <h1>Mon Portfolio</h1>
 
-        <!-- ==================== PAGE 1: HOME ==================== -->
-        <main id="home-page" class="page-section active-page home-content">
-            <div class="profile-container">
-                <div class="image-circle">
-                    <!-- Beddel avatar.jpg b smityat tsouira dyalk -->
-                    <img src="article.jpg" alt="Mary Smith Circle">
+        <nav>
+            <a href="#">Accueil</a>
+            <a href="#">Mes projets</a>
+            <a href="#">Contact</a>
+        </nav>
+    </header>
+
+
+    <!-- Contenu principal -->
+    <main>
+
+        <section class="project">
+
+            <!-- Image du projet -->
+            <div class="project-image">
+                <div class="image-placeholder">
+                    soolde
                 </div>
             </div>
-            <div class="intro-container">
-                <p class="greeting">HI there!</p>
-                <h1 class="main-title">Im Developer<span class="cursor">|</span></h1>
-                <p class="subtitle">i make the complex</p>
-            </div>
-        </main>
 
-        <!-- ==================== PAGE 2: ABOUT ME ==================== -->
-        <main id="about-page" class="page-section about-content">
-            <div class="large-profile">
-                <!-- Beddel avatar.jpg b tsouira dyalk l-kbira -->
-                <img src="jj.jpg" alt="Mary Smith Large">
-            </div>
-            <div class="details-card">
-                <span class="section-tag">Who am i?</span>
-                <h1 class="about-title">I'm Mary Smith, a visual UX/UI Designer and Web Developer</h1>
-                
-                <p class="about-description">
-                    Bienvenue sur mon portfolio. Je suis étudiant en première année de développement web. 
-                    Ce portfolio présente mes projets, mes compétences et mon évolution dans le domaine du développement web.
+
+            <!-- Informations du projet -->
+            <div class="project-info">
+
+                <h2>JobLink</h2>
+
+                <p class="description">
+                    Solde est une plateforme web qui permet aux utilisateurs 
+                    dacheter et de vendre des articles et des stocks à petit prix.
                 </p>
 
-                <div class="meta-info">
-                    <div><strong>Name:</strong> Mary Smith</div>
-                    <div><strong>From:</strong> New York, USA</div>
-                    <div><strong>Age:</strong> 25</div>
-                    <div><strong>Email:</strong> contact@example.com</div>
+
+                <h3>Objectif du projet</h3>
+
+                <p>
+                    Lobjectif de Solde est de faciliter la vente et 
+                    lachat de stocks à petit prix entre vendeurs et acheteurs.
+                </p>
+
+
+                <h3>Technologies utilisées</h3>
+
+                <div class="technologies">
+                    <span>HTML</span>
+                    <span>CSS</span>
+                    <span>JavaScript</span>
                 </div>
 
-                <a href="#" class="download-btn">Download CV</a>
+
+                <h3>Fonctionnalités</h3>
+
+                <ul>
+                   <li> Consulter les articles disponibles.</li>
+                    <li>Ajouter des articles au panier.</li>
+                    <li>Choisir la quantité souhaitée.</li>
+                    <li>Ajouter et publier un stock à vendre.</li>
+                   <li> Consulter le prix et la description des articles.</li>
+                    <li>Contacter directement le vendeur pour finaliser lachat.</li>
+                  <li> La livraison nest pas disponible.</li>
+                </ul>
+
+
+                <a href="#" class="btn">
+                    Voir le projet
+                </a>
+
             </div>
-        </main>
 
-        <!-- ==================== NAVIGATION MENU ==================== -->
-        <nav class="nav-menu">
-            <button class="nav-item active" onclick="navigateTo('home-page')">home</button>
-            <button class="nav-item" onclick="navigateTo('about-page')">My skills</button>
-            <button class="nav-item" onclick="navigateTo('about-page')">contact</button>
-        </nav>
-    </div>
+        </section>
 
-    <!-- Script bach tbeddel bin l-pages bla ma t-recharger l-page -->
-    <script>
-        function navigateTo(pageId) {
-            const pages = document.querySelectorAll('.page-section');
-            pages.forEach(page => page.classList.remove('active-page'));
+    </main>
 
-            const activePage = document.getElementById(pageId);
-            activePage.classList.add('active-page');
 
-            const menuItems = document.querySelectorAll('.nav-item');
-            menuItems.forEach(item => item.classList.remove('active'));
+    <!-- Pied de page -->
+    <footer>
+        <p>© 2026 Mon Portfolio - Tous droits réservés</p>
+    </footer>
 
-            event.target.classList.add('active');
-        }
-    </script>
 </body>
 </html>
-
+```

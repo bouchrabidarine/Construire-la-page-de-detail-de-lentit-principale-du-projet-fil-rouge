@@ -1,223 +1,210 @@
-/* ==================== GLOBAL STYLES ==================== */
+
+/* Réinitialisation */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
+
+/* Corps de la page */
 body {
-    background-color: #121212;
-    color: #ffffff;
-    min-height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    overflow-x: hidden;
+    font-family: Arial, sans-serif;
+    background-color: #f4f6f8;
+    color: #222;
 }
 
-.container {
-    width: 100%;
-    max-width: 1200px;
-    min-height: 100vh;
-    padding: 40px;
+
+/* Header */
+header {
+    background-color: #cc90d5;
+    color: white;
+
+    padding: 20px 60px;
+
     display: flex;
-    flex-direction: column;
     justify-content: space-between;
-    position: relative;
+    align-items: center;
 }
 
-/* --- Logo Style --- */
-.logo {
-    color: #00ff87;
-    font-size: 1.8rem;
-    font-weight: bold;
-    align-self: flex-start;
+
+header h1 {
+    font-size: 25px;
 }
 
-/* --- Menu Style --- */
-.nav-menu {
-    align-self: flex-start;
+
+/* Navigation */
+nav {
     display: flex;
-    gap: 30px;
-    margin-top: 20px;
-    z-index: 10;
+    gap: 25px;
 }
 
-.nav-item {
-    color: #888888;
+
+nav a {
+    color: white;
     text-decoration: none;
-    font-size: 1rem;
-    text-transform: capitalize;
-    cursor: pointer;
-    transition: color 0.3s ease;
-    background: none;
-    border: none;
-    padding-bottom: 4px;
+    font-size: 16px;
 }
 
-.nav-item:hover, .nav-item.active {
-    color: #ffffff;
-    border-bottom: 2px solid #ffffff;
+
+nav a:hover {
+    color: #e18ee3;
 }
 
-/* --- Switching System Display --- */
-.page-section {
-    display: none;
-    flex: 1;
-    width: 100%;
-    opacity: 0;
-    transition: opacity 0.4s ease-in-out;
+
+/* Contenu principal */
+main {
+    max-width: 1100px;
+    margin: 50px auto;
+    padding: 20px;
 }
 
-.page-section.active-page {
-    display: flex;
-    opacity: 1;
+
+/* Projet */
+.project {
+    background-color: white;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+
+    gap: 40px;
+
+    padding: 40px;
+
+    border-radius: 15px;
+
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
 }
 
-/* ==================== PAGE 1: HOME STYLING ==================== */
-.home-content {
-    align-items: center;
-    justify-content: center;
-    gap: 80px;
-    flex-wrap: wrap;
-}
 
-.profile-container {
-    display: flex;
-    justify-content: center;
-}
-
-.image-circle {
-    width: 320px;
-    height: 320px;
-    border-radius: 50%;
-    overflow: hidden;
-    background-color: #2a2a2a;
+/* Image */
+.project-image {
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-.image-circle img {
+
+.image-placeholder {
     width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
+    height: 350px;
 
-.intro-container {
-    max-width: 500px;
-}
+    background-color: #2563eb;
 
-.greeting {
-    font-size: 1.1rem;
-    color: #a0a0a0;
-    margin-bottom: 10px;
-}
+    color: white;
 
-.main-title {
-    font-size: 3.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    font-size: 40px;
     font-weight: bold;
-    margin-bottom: 10px;
-    white-space: nowrap;
+
+    border-radius: 12px;
 }
 
-.cursor {
-    color: #ffffff;
-    animation: blink 0.7s infinite;
-}
 
-.subtitle {
-    font-size: 1.2rem;
-    color: #888888;
-}
-
-/* ==================== PAGE 2: ABOUT STYLING ==================== */
-.about-content {
-    align-items: center;
-    justify-content: center;
-    gap: 60px;
-    flex-wrap: wrap;
-    padding: 20px 0;
-}
-
-.large-profile {
-    width: 400px;
-    max-width: 100%;
-}
-
-.large-profile img {
-    width: 100%;
-    border-radius: 8px;
-    object-fit: cover;
-}
-
-.details-card {
-    flex: 1;
-    max-width: 600px;
-}
-
-.section-tag {
-    color: #00ff87;
-    font-size: 0.9rem;
-    font-weight: bold;
-    text-transform: uppercase;
-    display: block;
+/* Informations */
+.project-info h2 {
+    font-size: 36px;
     margin-bottom: 15px;
 }
 
-.about-title {
-    font-size: 2.2rem;
-    line-height: 1.3;
-    margin-bottom: 20px;
+
+.project-info h3 {
+    margin-top: 25px;
+    margin-bottom: 10px;
+    color: #59345d;
 }
 
-.about-description {
-    color: #b0b0b0;
-    line-height: 1.6;
-    margin-bottom: 30px;
-    font-size: 1.05rem;
+
+.description {
+    line-height: 1.7;
+    color: #555;
 }
 
-.meta-info {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 15px;
-    margin-bottom: 35px;
-    color: #e0e0e0;
+
+/* Technologies */
+.technologies {
+    display: flex;
+    gap: 10px;
 }
 
-.meta-info strong {
-    color: #00ff87;
-    margin-right: 5px;
+
+.technologies span {
+    background-color: #e5e7eb;
+
+    padding: 8px 15px;
+
+    border-radius: 20px;
+
+    font-size: 14px;
 }
 
-.download-btn {
+
+/* Liste */
+ul {
+    padding-left: 20px;
+}
+
+
+li {
+    margin-bottom: 8px;
+}
+
+
+/* Bouton */
+.btn {
     display: inline-block;
-    background-color: #00ff87;
-    color: #121212;
-    padding: 12px 30px;
-    border-radius: 4px;
+
+    margin-top: 25px;
+
+    background-color: #ef7ae9;
+    color: white;
+
+    padding: 12px 22px;
+
+    border-radius: 8px;
+
     text-decoration: none;
-    font-weight: bold;
-    transition: background-color 0.3s ease;
+
+    transition: 0.3s;
 }
 
-.download-btn:hover {
-    background-color: #00cc6a;
+
+.btn:hover {
+    background-color: #c853eb;
 }
 
-/* --- Blinking Cursor Animation --- */
-@keyframes blink {
-    0%, 100% { opacity: 1; }
-    50% { opacity: 0; }
+
+/* Footer */
+footer {
+    text-align: center;
+
+    background-color: #d594e6;
+
+    color: white;
+
+    padding: 20px;
+
+    margin-top: 40px;
 }
 
-/* --- Responsive Layout for Mobile/Tablets --- */
+
+/* Responsive */
 @media (max-width: 768px) {
-    .main-title { font-size: 2.5rem; }
-    .home-content, .about-content { flex-direction: column; text-align: center; }
-    .large-profile { width: 280px; }
-    .nav-menu { align-self: center; }
-    .meta-info { grid-template-columns: 1fr; text-align: left; padding-left: 20px;}
+
+    header {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .project {
+        grid-template-columns: 1fr;
+    }
+
+    .image-placeholder {
+        height: 250px;
+    }
 }
+
