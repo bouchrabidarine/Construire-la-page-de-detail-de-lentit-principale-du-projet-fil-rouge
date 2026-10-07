@@ -207,4 +207,79 @@ footer {
         height: 250px;
     }
 }
+/* --- Section Cartes des projets --- */
+.projects {
+    display: grid;
+    /* taysawb rasha automatic 3la 7sab l-écran bla ma tkhrej */
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); 
+    gap: 25px;
+    justify-content: center;
+    padding: 20px;
+    box-sizing: border-box; /* katmna3 l-3anasir ykhrjo 3la l-écran */
+}
+
+.project-card {
+    background-color: white;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    
+    /* flex hna ghir bash nqaddo l-3anasir l-dakhel dyal l-carte verticalement */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; 
+    box-sizing: border-box;
+}
+
+.project-card h3 {
+    color: #531d54;
+    margin-top: 0;
+    margin-bottom: 15px;
+}
+
+.project-card p {
+    line-height: 1.6;
+    margin-bottom: 25px;
+    color: #4b5563; /* loun rmad khfif mry7 lil 3ayn */
+    flex-grow: 1; /* taykhli l-h2 w text yakhdo blasthom w bton yhbét lta7t */
+}
+
+.project-card a {
+    display: block; /* bton yakhod l-3ard kaml dyal l-carte yji m3awt */
+    text-align: center;
+    background-color: #cc90d5;
+    color: white;
+    padding: 12px 20px;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: 500;
+    transition: background-color 0.3s ease;
+}
+
+.project-card a:hover {
+    background-color: #9f1fa8;
+}
+
+/* --- Page détail d'un projet --- */
+.project-detail {
+    background-color: white;
+    max-width: 90%; /* taykhliha dima m3awta hta f l-pantallas sghar */
+    width: 850px;
+    margin: 50px auto;
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    box-sizing: border-box;
+}
+
+.project-detail h2 {
+    color: #601e6c;
+    margin-top: 0;
+    margin-bottom: 20px;
+}
+
+.project-detail h3 {
+    margin-top: 25px;
+    margin-bottom: 10px;
+}
 
