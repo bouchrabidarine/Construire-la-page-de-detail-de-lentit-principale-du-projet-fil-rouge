@@ -1,285 +1,54 @@
 
-/* Réinitialisation */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
 
-
-/* Corps de la page */
 body {
     font-family: Arial, sans-serif;
-    background-color: #f4f6f8;
-    color: #222;
+    margin: 0;
+    background-color: #f4f4f4;
+    color: #333;
 }
 
-
-/* Header */
 header {
-    background-color: #cc90d5;
+    background-color: #34495e;
     color: white;
-
-    padding: 20px 60px;
-
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+    text-align: center;
+    padding: 30px;
 }
 
-
-header h1 {
-    font-size: 25px;
-}
-
-
-/* Navigation */
 nav {
-    display: flex;
-    gap: 25px;
+    background-color: white;
+    text-align: center;
+    padding: 15px;
 }
-
 
 nav a {
-    color: white;
     text-decoration: none;
-    font-size: 16px;
+    color: #34495e;
+    margin: 15px;
 }
 
-
-nav a:hover {
-   color: #efd8f0;
-}
-
-
-/* Contenu principal */
-main {
-    max-width: 1100px;
-    margin: 50px auto;
-    padding: 20px;
-}
-
-
-/* Projet */
-.project {
+section {
     background-color: white;
-
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-
-    gap: 40px;
-
-    padding: 40px;
-
-    border-radius: 15px;
-
-    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
-}
-
-
-/* Image */
-.project-image {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-
-.image-placeholder {
-    width: 100%;
-    height: 350px;
-
-    background-color: #2563eb;
-
-    color: white;
-
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-    font-size: 40px;
-    font-weight: bold;
-
-    border-radius: 12px;
-}
-
-
-/* Informations */
-.project-info h2 {
-    font-size: 36px;
-    margin-bottom: 15px;
-}
-
-
-.project-info h3 {
-    margin-top: 25px;
-    margin-bottom: 10px;
-    color: #59345d;
-}
-
-
-.description {
-    line-height: 1.7;
-    color: #555;
-}
-
-
-/* Technologies */
-.technologies {
-    display: flex;
-    gap: 10px;
-}
-
-
-.technologies span {
-    background-color: #e5e7eb;
-
-    padding: 8px 15px;
-
-    border-radius: 20px;
-
-    font-size: 14px;
-}
-
-
-/* Liste */
-ul {
-    padding-left: 20px;
-}
-
-
-li {
-    margin-bottom: 8px;
-}
-
-
-/* Bouton */
-.btn {
-    display: inline-block;
-
-    margin-top: 25px;
-
-    background-color: #ef7ae9;
-    color: white;
-
-    padding: 12px 22px;
-
+    margin: 20px auto;
+    padding: 20px;
+    width: 80%;
     border-radius: 8px;
-
-    text-decoration: none;
-
-    transition: 0.3s;
 }
 
-
-.btn:hover {
-    background-color: #c853eb;
+h2 {
+    color: #34495e;
 }
 
+.projet {
+    background-color: #ecf0f1;
+    padding: 15px;
+    margin: 10px 0;
+    border-radius: 5px;
+}
 
-/* Footer */
 footer {
-    text-align: center;
-
-    background-color: #d594e6;
-
+    background-color: #34495e;
     color: white;
-
-    padding: 20px;
-
-    margin-top: 40px;
-}
-
-
-/* Responsive */
-@media (max-width: 768px) {
-
-    header {
-        flex-direction: column;
-        gap: 15px;
-    }
-
-    .project {
-        grid-template-columns: 1fr;
-    }
-
-    .image-placeholder {
-        height: 250px;
-    }
-}
-/* --- Section Cartes des projets --- */
-.projects {
-    display: grid;
-    /* taysawb rasha automatic 3la 7sab l-écran bla ma tkhrej */
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); 
-    gap: 25px;
-    justify-content: center;
-    padding: 20px;
-    box-sizing: border-box; /* katmna3 l-3anasir ykhrjo 3la l-écran */
-}
-
-.project-card {
-    background-color: white;
-    padding: 25px;
-    border-radius: 12px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-    
-    /* flex hna ghir bash nqaddo l-3anasir l-dakhel dyal l-carte verticalement */
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between; 
-    box-sizing: border-box;
-}
-
-.project-card h3 {
-    color: #531d54;
-    margin-top: 0;
-    margin-bottom: 15px;
-}
-
-.project-card p {
-    line-height: 1.6;
-    margin-bottom: 25px;
-    color: #4b5563; /* loun rmad khfif mry7 lil 3ayn */
-    flex-grow: 1; /* taykhli l-h2 w text yakhdo blasthom w bton yhbét lta7t */
-}
-
-.project-card a {
-    display: block; /* bton yakhod l-3ard kaml dyal l-carte yji m3awt */
     text-align: center;
-    background-color: #cc90d5;
-    color: white;
-    padding: 12px 20px;
-    border-radius: 6px;
-    text-decoration: none;
-    font-weight: 500;
-    transition: background-color 0.3s ease;
-}
-
-.project-card a:hover {
-    background-color: #9f1fa8;
-}
-
-/* --- Page détail d'un projet --- */
-.project-detail {
-    background-color: white;
-    max-width: 90%; /* taykhliha dima m3awta hta f l-pantallas sghar */
-    width: 850px;
-    margin: 50px auto;
-    padding: 40px;
-    border-radius: 15px;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-    box-sizing: border-box;
-}
-
-.project-detail h2 {
-    color: #601e6c;
-    margin-top: 0;
-    margin-bottom: 20px;
-}
-
-.project-detail h3 {
-    margin-top: 25px;
-    margin-bottom: 10px;
+    padding: 10px;
 }
 
