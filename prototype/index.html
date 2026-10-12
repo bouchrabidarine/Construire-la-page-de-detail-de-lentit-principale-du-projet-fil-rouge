@@ -3,136 +3,53 @@
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <title>Détail du projet - soolde</title>
-
+    <title>Mon Portfolio</title>
     <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
 
-    <!-- En-tête -->
     <header>
         <h1>Mon Portfolio</h1>
-
-        <nav>
-            <a href="#">Accueil</a>
-            <a href="#">Mes projets</a>
-            <a href="#">Contact</a>
-        </nav>
+        <p>Apprenante en développement web</p>
     </header>
 
+    <nav>
+        <a href="#about">À propos</a>
+        <a href="#skills">Compétences</a>
+        <a href="#projects">Projets</a>
+    </nav>
 
-    <!-- Contenu principal -->
-    <main>
+    <section id="about">
+        <h2>À propos de moi</h2>
+        <p>Bonjour, je suis apprenante en développement web.</p>
+        <p>J'aime apprendre et créer des sites web.</p>
+    </section>
 
-        <section class="project">
+    <section id="skills">
+        <h2>Mes compétences</h2>
+        <ul>
+            <li>HTML</li>
+            <li>CSS</li>
+            <li>JavaScript</li>
+        </ul>
+    </section>
 
-            <!-- Image du projet -->
-            <div class="project-image">
-                <div class="image-placeholder">
-                  <img src="Graphic design portfolio (1).webp" >
-                </div>
-            </div>
+    <section id="projects">
+        <h2>Mes projets</h2>
 
+        <div class="projet">
+            <h3>Mon Portfolio</h3>
+            <p>Un site pour présenter mon parcours.</p>
+        </div>
 
-            <!-- Informations du projet -->
-            <div class="project-info">
+        <div class="projet">
+            <h3>Site Solde</h3>
+            <p>Un site pour acheter et vendre des articles.</p>
+        </div>
+    </section>
 
-                <h3> intoduction</h3>
-
-                <p class="description">
-                    Solde est une plateforme web qui permet aux utilisateurs 
-                    dacheter et de vendre des articles et des stocks à petit prix.
-                </p>
-
-
-                <h3>Objectif du projet</h3>
-
-                <p>
-                    Lobjectif de Solde est de faciliter la vente et 
-                    lachat de stocks à petit prix entre vendeurs et acheteurs.
-                </p>
-
-
-                <h3>Technologies utilisées</h3>
-
-                <div class="technologies">
-                    <span>HTML</span>
-                    <span>CSS</span>
-                    <span>JavaScript</span>
-                </div>
-
-
-                <h3>Fonctionnalités</h3>
-
-                <ul>
-                   <li> Consulter les articles disponibles.</li>
-                    <li>Ajouter des articles au panier.</li>
-                    <li>Choisir la quantité souhaitée.</li>
-                    <li>Ajouter et publier un stock à vendre.</li>
-                   <li> Consulter le prix et la description des articles.</li>
-                    <li>Contacter directement le vendeur pour finaliser lachat.</li>
-                  <li> La livraison nest pas disponible.</li>
-                </ul>
-
-
-                <a href="#" class="btn">
-                    Voir le projet
-                </a>
-
-            </div>
-            </div>
-            <section class="projects">
-
-                <h2>Mes projets</h2>
-            
-                <div class="project-card">
-            
-                    <h3>Solde</h3>
-            
-                    <p>
-                        Une plateforme web permettant d'acheter et de vendre
-                        des articles et des stocks à petit prix.
-                    </p>
-            
-                    <a href="projets/solde.html">
-                        Voir le projet
-                    </a>
-            
-                </div>
-            
-            
-                
-            
-                <div class="project-card">
-            
-                    <h3>Jeu JavaScript</h3>
-            
-                    <p>
-                        Un jeu permettant au joueur de deviner un nombre
-                        entre 1 et 100.
-                    </p>
-            
-                    <a href="index.js">
-                        Voir le projet
-                    </a>
-            
-                </div>
-            
-            </section>
-        </section>
-
-
-        </section>
-
-    </main>
-
-
-    <!-- Pied de page -->
     <footer>
-        <p>© 2026 Mon Portfolio - Tous droits réservés</p>
+        <p>© 2026 - Mon Portfolio</p>
     </footer>
 
 </body>
